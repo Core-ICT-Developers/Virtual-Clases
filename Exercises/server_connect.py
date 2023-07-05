@@ -37,4 +37,6 @@ connection.commit()
 connection.close()
 cursor.close()
 
+#trying to push to git
+#SQL commands
 
