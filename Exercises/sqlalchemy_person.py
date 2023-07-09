@@ -1,5 +1,5 @@
-#pip install flask
-#pip install flask-sqlalchemy
+#pip install Flask
+#pip install -U Flask-SQLAlchemy
 #pip install psycopg2
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
