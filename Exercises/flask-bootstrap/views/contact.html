@@ -1,0 +1,10 @@
+
+{% extends "bootstrap/base.html" %}
+{% block scripts %}
+<script src="{{url_for('.static', filename='js/index.js')}}"></script>
+{{super()}}
+{% endblock %}
+{% block title %}Contacts{% endblock %}
+{% block content %}
+<h1>Contacts</h1>
+{% endblock %}

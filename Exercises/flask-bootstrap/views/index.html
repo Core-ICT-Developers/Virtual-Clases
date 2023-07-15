@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Home</title>
+</head>
+<body>
+    <div class="container">
+      {% include "header.html" %}
+        <div class="jumbotron">
+            <h1 class="display-4">
+          		{% if title %}
+          		  {{ title }}
+          		{% else %}
+          		 An image or slider here
+          		{% endif %}
+	         </h1>
+        </div>
+        Home content here
+    </div>
+    {% include "footer.html" %}
+</body>
+
+</html>

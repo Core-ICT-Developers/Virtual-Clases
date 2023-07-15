@@ -43,12 +43,12 @@ db = SQLAlchemy(app)
 
 migrate = Migrate(app, db)
 
-
 class Todo(db.Model):
     __tablename__ = 'todo'
     id = db.Column(db.Integer, primary_key=True)
     description = db.Column(db.String(), nullable=False)
     completed = db.Column(db.Boolean, nullable=False, default=False)
+    name = db.Column(db.String(), nullable=False)
 
 
 def __repr__(self):
@@ -59,7 +59,9 @@ def __repr__(self):
 def create_todo():
     #db.create_all()
     description = request.args['description']
-    todo = Todo(description=description)
+    
+    todo = Todo(description=description,name=request.args['name'])
+    
     db.session.add(todo)
     db.session.commit()
     return f'Successfully saved {description}'
